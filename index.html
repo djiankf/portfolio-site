@@ -6,6 +6,8 @@
     <meta name="description" content="Djian's Portfolio">
     <title>Djian's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
 </head>
 <body>
     <header>
@@ -33,35 +35,32 @@
 
     <section id="projects">
         <h2>Projects</h2>
+    
         <div class="project">
-            <h3>Graduate Research Assistantship at Georgia Tech with the Aerospace Systems Design Laboratory -- 
-                Mechanical Simulation Engineer for Honda (USA)</h3>
-            <p><b>Short Description: </b>Developed real-time driver-in-the-loop vehicle simulation models using <i>SIMPACK 
-                by Dassault Systèmes</i>. Modulated system model fidelity of multi-body dynamics components 
-                and proposed alternatives to balance performance and cost.</p>
-            <p><b>Technical Approach: </b>BBBBBBBB</p>
-            <p><b>My Contribution: </b>BBBBBBBB</p>
-            <p><b>Results: </b>BBBBBBBB</p>
-
-            <h3>Graduate Research Assistantship at Georgia Tech with the Aerospace Systems Design Laboratory -- 
-                Energy Modeling Engineering for Siemens (USA)</h3>
-            <p><b>Short Description: </b> AAAAAA  </p>
-
-            <h3>Research project for the the Georges Charpak Biomechanics Laboratory (Paris) </h3>
-            <p><b>Short Description: </b> AAAAAA  </p>
-
-            <h3>Research project for the the Georges Charpak Biomechanics Laboratory (Paris) </h3>
-            <p><b>Short Description: </b> AAAAAA  </p>
-
-            <h3>Project at the Arts et Métiers (Paris) - Airplane Brakes Design </h3>
-            <p><b>Short Description: </b> AAAAAA  </p>
-
-            <h3>Project at the Arts et Métiers (Paris) - Mechanical Watch Design </h3>
-            <p><b>Short Description: </b> AAAAAA  </p>
-
+            <h3 class="project-title" onclick="toggleDescription(this)">
+                Graduate Research Assistantship at Georgia Tech
+            </h3>
+            <div class="project-description">
+                <p><b>Short Description: </b>Developed real-time driver-in-the-loop vehicle simulation models using <i>SIMPACK 
+                    by Dassault Systèmes</i>. Modulated system model fidelity of multi-body dynamics components 
+                    and proposed alternatives to balance performance and cost.</p>
+                <p><b>Technical Approach: </b>BBBBBBBB</p>
+                <p><b>My Contribution: </b>BBBBBBBB</p>
+                <p><b>Results: </b>BBBBBBBB</p>
+            </div>
         </div>
-        <!-- Add more projects here -->
+    
+        <div class="project">
+            <h3 class="project-title" onclick="toggleDescription(this)">
+                Another Project Title
+            </h3>
+            <div class="project-description">
+                <p><b>Short Description: </b>Project details go here.</p>
+                <p><b>Technical Approach: </b>AAAAAAA</p>
+            </div>
+        </div>
     </section>
+
 
     <section id="contact">
         <h2>Contact</h2>
