@@ -25,7 +25,6 @@ header h1 {
     margin: 0;
     font-size: 2em;
 }
-
 /* Navigation */
 nav ul {
     list-style: none;
@@ -47,7 +46,6 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-
 /* Section Styling */
 section {
     padding: 20px;
