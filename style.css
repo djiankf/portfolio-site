@@ -56,6 +56,14 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.project-description ul {
+    padding-left: 40px; /* Indentation for the bullet points */
+}
+
+.project-description li {
+    margin-bottom: 5px; /* Space between bullet points */
+}
+
 /* Section Styling */
 section {
     padding: 20px;
