@@ -46,6 +46,16 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+.project-description ul {
+    padding-left: 40px; /* Increase this value to make the indentation more noticeable */
+}
+
+.project-description li {
+    margin-bottom: 5px; /* Optional: adds space between bullet points */
+}
+
+
 /* Section Styling */
 section {
     padding: 20px;
