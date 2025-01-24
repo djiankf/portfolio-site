@@ -41,14 +41,76 @@
                 Graduate Research Assistantship at Georgia Tech
             </h3>
             <div class="project-description">
-                <p><b>Short Description: </b>Developed real-time driver-in-the-loop vehicle simulation models using <i>SIMPACK 
-                    by Dassault Systèmes</i>. Modulated system model fidelity of multi-body dynamics components 
-                    and proposed alternatives to balance performance and cost.</p>
-                <p><b>Technical Approach: </b>BBBBBBBB</p>
-                <p><b>My Contribution: </b>BBBBBBBB</p>
-                <p><b>Results: </b>BBBBBBBB</p>
+                <h4>Why the Automotive Industry Needs Real-Time (RT) Simulation</h4>
+                <p>The automotive industry depends on a diverse range of tests to develop production-ready vehicles that meet high standards of safety, performance, comfort, durability, and regulatory compliance. Both objective and subjective metrics are essential when evaluating a vehicle’s performance, comfort, and usability. Simulations, particularly those incorporating driver-in-the-loop (DIL) technology, enable the collection of subjective metrics through real-time (RT) simulation. This becomes possible only if the simulation is sufficiently realistic.</p>
+        
+                <h4>What is Real-Time Simulation?</h4>
+                <p>Real-time simulation refers to computer models that operate at the same rate as the physical system they are representing. This allows for dynamic, real-time interactions with the model, making it possible to simulate complex systems in realistic environments.</p>
+        
+                <h4>Our Objective:</h4>
+                <p>Streamline the process of creating and refining the fidelity of component models for RT simulation. Specifically, we aim to propose a method for evaluating the trade-off between real-time computational performance and model error in multi-body dynamics (MBD) for RT driver-in-the-loop simulations.</p>
+        
+                <h4>Technical Tasks:</h4>
+                <ul>
+                    <li><strong>Background and Training:</strong>
+                        <ul>
+                            <li>Conduct a literature review to understand the relevant concepts.</li>
+                            <li>Provide software training to familiarize the team with necessary tools and methodologies.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Modeling and Simulation Experimentation:</strong>
+                        <ul>
+                            <li>Benchmark the baseline model and identify performance bottlenecks.</li>
+                            <li>Experiment with variable fidelity modeling to assess the impact of different fidelity levels on simulation performance.</li>
+                            <li>Conduct simulations and experimentation to identify optimal solver settings.</li>
+                            <li>Validate and verify the models to ensure accuracy and reliability.</li>
+                            <li>Automate parts of the modeling process to improve efficiency.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Approach Evaluation:</strong>
+                        <ul>
+                            <li>Evaluate the real-time performance of the simulation models.</li>
+                            <li>Assess model error by comparing simulation results to real-world data.</li>
+                            <li>Perform trade-off analysis to understand the balance between real-time computational demands and model accuracy, and create a decision-making framework.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Project Maintenance:</strong>
+                        <ul>
+                            <li>Maintain ongoing stakeholder involvement through bi-weekly meetings for feedback and alignment.</li>
+                            <li>Document the project’s progress and ensure knowledge transfer for future use.</li>
+                            <li>Provide final deliverables to showcase results and methodologies.</li>
+                        </ul>
+                    </li>
+                </ul>
+        
+                <h4>Morphological Matrix:</h4>
+                <p>To explore various model configurations, we will evaluate different combinations of fidelity levels for key vehicle components (e.g., suspension, steering, subframe, tires). By creating alternatives that mix different fidelity levels (e.g., suspension with fidelity level 3, steering with fidelity level 1), we can examine how each combination affects real-time performance, computational cost, and model precision.</p>
+                <p>Additionally, we will employ <strong>Design of Experiments (DoE)</strong> to systematically analyze how different factors affect the outcome. DoE will help us plan, conduct, and interpret controlled tests to evaluate the relationships between process factors and model outputs.</p>
+        
+                <h4>Main Tools and Enablers:</h4>
+                <ul>
+                    <li><strong>JMP:</strong> Used for generating DoE and creating surrogate models to predict performance across different alternatives.</li>
+                    <li><strong>Simpack:</strong> Used to model mechanical components and simulate their behavior in various conditions.</li>
+                </ul>
+        
+                <h4>Error Quantification and Challenges:</h4>
+                <p>Key challenges include:</p>
+                <ul>
+                    <li>Point-to-point alignment of dynamic time series.</li>
+                    <li>Complex interactions between components in the multi-body system.</li>
+                    <li>Handling multivariate problems and nonlinearities.</li>
+                </ul>
+        
+                <p><strong>Dynamic Time Warping (DTW)</strong> will be employed to address these challenges:</p>
+                <ul>
+                    <li><strong>IDTW</strong> (Improved Dynamic Time Warping) can handle temporal misalignments effectively.</li>
+                    <li>It is robust to speed variations and captures similarities between different nonlinearities.</li>
+                    <li>It doesn’t require uniform sampling, making it adaptable to real-world data.</li>
+                    <li>DTW allows for intuitive visualizations that can aid in understanding the discrepancies between the models and real-world measurements.</li>
+                </ul>
             </div>
         </div>
+        
     
         <div class="project">
             <h3 class="project-title" onclick="toggleDescription(this)">
