@@ -157,19 +157,90 @@
     
         <div class="project">
             <h3 class="project-title" onclick="toggleDescription(this)">
-                > Another Project Title
+                > Analysis Program for Spine Kinematics - Research Project
             </h3>
             <div class="project-description">
-                <p><b>Short Description: </b>Project details go here.</p>
-                <p><b>Technical Approach: </b>AAAAAAA</p>
+            
+                <p><br>Collaborative project aimed at developing a program to analyze the kinematics of a human spine by tracking vertebrae in 3D from X-ray images. The project involved a team of four researchers and two academic advisors.</p>
+                <p>Role: Lead for Point Detection and Temporal Tracking</p>
+            
+                <h4><br>Project Summary</h4>
+                <p>Developed an analysis tool to track and render the movement of human vertebrae over time using X-ray images taken at various angles. The workflow included 2D point detection, point matching between views, 3D point reconstruction, clustering for vertebrae identification, and user interface development for manual intervention and result refinement.</p>
+            
+                <h4><br>Objective</h4>
+                <p>To create a program capable of detecting and tracking metallic markers inserted in vertebrae, reconstructing their 3D positions over time, and providing an intuitive user interface for result review and manual corrections.</p>
+            
+                <h4><br>Key Methodologies</h4>
+            
+                <h5>1. Point Detection</h5>
+                <p>Identified the 2D positions of metallic markers in X-ray images using two main approaches:</p>
+                <ul>
+                    <li><strong>OpenCV-Based Detection:</strong> Utilized <code>SimpleBlobDetector()</code> after pre-processing the images with adaptive thresholding to enhance the visibility of the markers.</li>
+                    <li><strong>Image Correlation:</strong> Compared regions of the image with a sample marker template to find matches without requiring binary image conversion. Achieved XX% accuracy in detecting markers.</li>
+                </ul>
+            
+                <h5>2. Point Matching</h5>
+                <p>Matched detected markers between two views taken at the same time step using clustering and DBSCAN methods, achieving near-perfect accuracy. Challenges included occlusions, which were addressed through clustering and point validation techniques.</p>
+            
+                <h5>3. Temporal Tracking</h5>
+                <p>Tracked marker movement between consecutive time steps with two approaches:</p>
+                <ul>
+                    <li><strong>OpenCV Object Tracking:</strong> Initial attempts using OpenCV’s built-in methods (e.g., brute force) were unreliable due to shape deformation in binary images.</li>
+                    <li><strong>Custom Algorithm:</strong> Developed an algorithm assuming planar motion (e.g., in X-Z plane) to match points based on proximity in consecutive time frames. Achieved nearly 100% accuracy.</li>
+                </ul>
+            
+                <h5>4. Data Clustering and Visualization</h5>
+                <p>Clustered 3D points to group markers by vertebrae. Challenges such as overlapping markers were addressed through a combination of DBSCAN and manual correction options in the interface.</p>
+            
+                <h5>5. User Interface</h5>
+                <p>Designed a Tkinter-based interface allowing users to visualize results, adjust detection thresholds, and manually correct errors. This ensured the tool was user-friendly and adaptable for various image sets.</p>
+            
+                <h4><br>Error Rates and Observations</h4>
+                <ul>
+                    <li>Image Correlation: 21% error</li>
+                    <li>Improved Correlation: 17% error</li>
+                    <li>Thresholding: 20% error</li>
+                    <li>Point Matching: 2% error</li>
+                    <li>Clustering: 5% error</li>
+                </ul>
+                <p>The tool significantly reduced manual processing time while requiring minimal human intervention for final adjustments.</p>
+            
+                <h4><br>Skills</h4>
+                <h5>Technical Skills</h5>
+                <ul>
+                    <li>Image processing and computer vision (OpenCV).</li>
+                    <li>Algorithm development for detection and tracking.</li>
+                    <li>Clustering techniques (DBSCAN) and data visualization.</li>
+                    <li>Building graphical user interfaces (Tkinter).</li>
+                </ul>
+            
+                <h5>Soft Skills</h5>
+                <ul>
+                    <li>Team collaboration across four members and two academic advisors.</li>
+                    <li>Problem-solving under constraints and iterative development.</li>
+                    <li>Presenting progress and results to research mentors.</li>
+                </ul>
+            
+                <h4><br>My Contribution</h4>
+                <ul>
+                    <li>Led the development of point detection algorithms.</li>
+                    <li>Implemented tracking algorithms for temporal analysis.</li>
+                    <li>Contributed to the design and implementation of the user interface.</li>
+                    <li>Collaborated with team members on clustering and error reduction.</li>
+                </ul>
+            
+                <div style="text-align: center;">
+                    <img src="images/SpineKinematics.jpg" alt="Spine Kinematics Example" style="max-width: 80%; height: auto;">
+                </div>
+                
             </div>
-        </div>
+            
     </section>
 
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>Email: <a href="mailto:fbdjian@gmail.com">fbdjian@gmail.com</a></p>
     </section>
 
     <footer>
