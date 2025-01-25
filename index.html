@@ -167,31 +167,52 @@
                 <h4><br>Project Summary</h4>
                 <p>Developed an analysis tool to track and render the movement of human vertebrae over time using X-ray images taken at various angles. The workflow included 2D point detection, point matching between views, 3D point reconstruction, clustering for vertebrae identification, and user interface development for manual intervention and result refinement.</p>
             
-                <h4><br>Objective</h4>
-                <p>To create a program capable of detecting and tracking metallic markers inserted in vertebrae, reconstructing their 3D positions over time, and providing an intuitive user interface for result review and manual corrections.</p>
-            
+                <div style="text-align: center;">
+                    <img src="images/spine1.jpg" alt="Spine picture 1" style="max-width: 80%; height: auto;">
+                </div>
+
+                <div style="text-align: center;">
+                    <img src="images/spine2.jpg" alt="Spine picture 2" style="max-width: 80%; height: auto;">
+                </div>
+
                 <h4><br>Key Methodologies</h4>
             
                 <h5>1. Point Detection</h5>
                 <p>Identified the 2D positions of metallic markers in X-ray images using two main approaches:</p>
                 <ul>
                     <li><strong>OpenCV-Based Detection:</strong> Utilized <code>SimpleBlobDetector()</code> after pre-processing the images with adaptive thresholding to enhance the visibility of the markers.</li>
-                    <li><strong>Image Correlation:</strong> Compared regions of the image with a sample marker template to find matches without requiring binary image conversion. Achieved XX% accuracy in detecting markers.</li>
+                    <li><strong>Image Correlation:</strong> Compared regions of the image with a sample marker template to find matches without requiring binary image conversion. Achieved 99% accuracy in detecting markers.</li>
                 </ul>
+                
+                <div style="text-align: center;">
+                    <img src="images/Tresholding_spine.jpg" alt="Thresholding" style="max-width: 80%; height: auto;">
+                </div>    
             
                 <h5>2. Point Matching</h5>
                 <p>Matched detected markers between two views taken at the same time step using clustering and DBSCAN methods, achieving near-perfect accuracy. Challenges included occlusions, which were addressed through clustering and point validation techniques.</p>
-            
+
+                <div style="text-align: center;">
+                    <img src="images/matching_vertebraes.jpg" alt="Point Matching" style="max-width: 80%; height: auto;">
+                </div>            
+
                 <h5>3. Temporal Tracking</h5>
                 <p>Tracked marker movement between consecutive time steps with two approaches:</p>
                 <ul>
                     <li><strong>OpenCV Object Tracking:</strong> Initial attempts using OpenCV’s built-in methods (e.g., brute force) were unreliable due to shape deformation in binary images.</li>
                     <li><strong>Custom Algorithm:</strong> Developed an algorithm assuming planar motion (e.g., in X-Z plane) to match points based on proximity in consecutive time frames. Achieved nearly 100% accuracy.</li>
                 </ul>
+                
+                <div style="text-align: center;">
+                    <img src="images/Tracking_spine.jpg" alt="Point Tracking" style="max-width: 80%; height: auto;">
+                </div>    
             
                 <h5>4. Data Clustering and Visualization</h5>
                 <p>Clustered 3D points to group markers by vertebrae. Challenges such as overlapping markers were addressed through a combination of DBSCAN and manual correction options in the interface.</p>
             
+                <div style="text-align: center;">
+                    <img src="images/G3D_spine.jpg" alt="3D spine representation" style="max-width: 80%; height: auto;">
+                </div>    
+
                 <h5>5. User Interface</h5>
                 <p>Designed a Tkinter-based interface allowing users to visualize results, adjust detection thresholds, and manually correct errors. This ensured the tool was user-friendly and adaptable for various image sets.</p>
             
@@ -203,8 +224,17 @@
                     <li>Point Matching: 2% error</li>
                     <li>Clustering: 5% error</li>
                 </ul>
+
                 <p>The tool significantly reduced manual processing time while requiring minimal human intervention for final adjustments.</p>
             
+                <div style="text-align: center;">
+                    <img src="images/GIF_result_spine_1.jpg" alt="Result" style="max-width: 80%; height: auto;">
+                </div>   
+
+                <div style="text-align: center;">
+                    <img src="images/GIF_result_spine_2.jpg" alt="Result" style="max-width: 80%; height: auto;">
+                </div>    
+
                 <h4><br>Skills</h4>
                 <h5>Technical Skills</h5>
                 <ul>
