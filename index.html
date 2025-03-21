@@ -54,6 +54,7 @@
                 <h4><br>What is Real-Time Simulation?</h4>
 
                 <p>Real-time simulation refers to computer models that operate at the same rate as the physical system they are representing. This allows for dynamic, real-time interactions with the model, making it possible to simulate complex systems in realistic environments.</p>
+                <p>Real-time simulation can demand significant computational resources.</p>
 
                 <img src="images/RTsimulator.jpg" alt="RT Simulator" style="max-width: 100%; height: auto;">
 
@@ -61,22 +62,21 @@
                     Image Source: <a href="https://www.faac.com/wp-content/uploads/2017/12/RDS-2000-with-tire.jpg" target="_blank">FAAC</a>
                 </p>
                 <h4><br>Objective:</h4>
-                <p>Streamline the process of creating and refining the fidelity of component models for RT simulation. Specifically, we aim to propose a method for evaluating the <b>trade-off between real-time computational performance and model error</b> in multi-body dynamics (MBD) for RT driver-in-the-loop simulations.</p>
+                <p>Honda provided us with a high-fidelity car model developed in Simpack.</p>
+                <p>The objective is to streamline the process of creating and refining the fidelity of component models for RT simulation. Specifically, we aim to propose a method for evaluating the <b>trade-off between real-time computational performance and model error</b> in multi-body dynamics (MBD) for RT driver-in-the-loop simulations.</p>
         
                 <h4><br>Technical Tasks:</h4>
                 <ul>
 
-                    <li><strong>Modeling and Simulation Experimentation:</strong>
-                        <ul>
-                            <li>Configure the baseline model on Simpack based on Honda's car model provided.</li>
-                            <li>Configure the solver settings.</li>
-                            <li>Analyze simulation bottlenecks to identify opportunities for simplifying the baseline model's components.</li>
-                            <li>Generation of all alternative simulations with varying levels of fidelity using statistical techniques such as Design of Experiments (DOE).</li>
-                            <li>Run simulations using Simpack.</li>
-                            <li>Determine the real-time factor (computational cost) and quantify the error for each simulation.</li>
-                            <li>Rank the alternatives by evaluating the trade-off between computational cost and performance.</li>
-                        </ul>
-                    </li>
+                    <ul>
+                        <li>Configure the baseline model on Simpack based on Honda's car model provided.</li>
+                        <li>Configure the solver settings.</li>
+                        <li>Analyze simulation bottlenecks to identify opportunities for simplifying the baseline model's components.</li>
+                        <li>Generation of all alternative simulations with varying levels of fidelity using statistical techniques such as Design of Experiments (DOE).</li>
+                        <li>Run simulations using Simpack.</li>
+                        <li>Determine the real-time factor (computational cost) and quantify the error for each simulation.</li>
+                        <li>Rank the alternatives by evaluating the trade-off between computational cost and performance.</li>
+                    </ul>
 
                 </ul>
 
@@ -86,7 +86,7 @@
                 <p>Each <strong>alternative</strong> represents a variation of our car model, where different components have specific fidelity levels that vary across simulations.</p>
                 
                 <p>Example of component simplification: </p>
-                
+
                 <div style="text-align: center;">
                     <img src="images/ex_comp_simp.jpg" alt="Example of component simplification" style="max-width: 80%; height: auto;">
                 </div>
@@ -99,10 +99,13 @@
                     <li><strong>Simpack:</strong> Used to model mechanical components and simulate their behavior in various conditions.</li>
                 </ul>
         
-                <h4><br>Error Quantification and Challenges:</h4>
+                <h4><br>Error Quantification of the simulations and Challenges:</h4>
+
+                <p>Error quantification involves measuring the difference between a simplified model and the high-fidelity car model, focusing particularly on chassis speeds and accelerations. Even small discrepancies can lead to significant objective and subjective differences perceptible to the driver.</p>
+
                 <p>Key challenges include:</p>
                 <ul>
-                    <li>Point-to-point alignment of dynamic time series.</li>
+                    <li>Point-to-point alignment of dynamic time serie between the baseline's outputs and the simulations' outputs.</li>
                     <li>Complex interactions between components in the multi-body system.</li>
                     <li>Handling multivariate problems.</li>
                 </ul>
@@ -128,7 +131,7 @@
         
                 <h4><br>My Contribution:</h4>
                 <ul>
-                    <li>Responsible for modeling the suspensions.</li>
+                    <li>Responsible for the generation of the alternatives.</li>
                     <li>Responsible for the error quantification.</li>
                     <li>Project coordinator and integrator of the team (6 contributors, 2 technical advisors, 1 manager).</li>
                 </ul>            
