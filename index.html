@@ -27,7 +27,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>General Engineering student with a strong foundation in Mechanical Engineering, 
+        <p>Graduate Engineering student with a strong foundation in Mechanical Engineering, 
             holding a French dual degree. I possess an interdisciplinary background encompassing 
             mechanical design and simulation, programming and algorithms, vehicle systems, robotics, 
             and project management expertise. Authorized to work in the U.S. under OPT.</p>
@@ -60,38 +60,37 @@
                 <p style="font-size: 0.9em; color: gray;">
                     Image Source: <a href="https://www.faac.com/wp-content/uploads/2017/12/RDS-2000-with-tire.jpg" target="_blank">FAAC</a>
                 </p>
-                <h4><br>Our Objective:</h4>
+                <h4><br>Objective:</h4>
                 <p>Streamline the process of creating and refining the fidelity of component models for RT simulation. Specifically, we aim to propose a method for evaluating the <b>trade-off between real-time computational performance and model error</b> in multi-body dynamics (MBD) for RT driver-in-the-loop simulations.</p>
         
                 <h4><br>Technical Tasks:</h4>
                 <ul>
-                    <li><strong>Background and Training:</strong>
-                        <ul>
-                            <li>Conduct a literature review to understand the relevant concepts.</li>
-                            <li>Familiarize with necessary tools and methodologies.</li>
-                        </ul>
-                    </li>
+
                     <li><strong>Modeling and Simulation Experimentation:</strong>
                         <ul>
-                            <li>Benchmark the baseline model and identify performance bottlenecks.</li>
-                            <li>Experiment with variable fidelity modeling to assess the impact of different fidelity levels on simulation performance.</li>
-                            <li>Conduct simulations and experimentation to identify optimal solver settings.</li>
-                            <li>Validate and verify the models to ensure accuracy and reliability.</li>
-                            <li>Automate parts of the modeling process to improve efficiency.</li>
+                            <li>Configure the baseline model on Simpack based on Honda's car model provided.</li>
+                            <li>Configure the solver settings.</li>
+                            <li>Analyze simulation bottlenecks to identify opportunities for simplifying the baseline model's components.</li>
+                            <li>Generation of all alternative simulations with varying levels of fidelity using statistical techniques such as Design of Experiments (DOE).</li>
+                            <li>Run simulations using Simpack.</li>
+                            <li>Determine the real-time factor (computational cost) and quantify the error for each simulation.</li>
+                            <li>Rank the alternatives by evaluating the trade-off between computational cost and performance.</li>
                         </ul>
                     </li>
-                    <li><strong>Approach Evaluation:</strong>
-                        <ul>
-                            <li>Evaluate the real-time factor of the simulation models.</li>
-                            <li>Assess model error by comparing simulation results to real-world data.</li>
-                            <li>Perform trade-off analysis to understand the balance between real-time computational demands and model accuracy, and create a decision-making framework.</li>
-                        </ul>
-                    </li>
-   
+
                 </ul>
-        
-                <h4><br>Morphological Matrix:</h4>
-                <p>To explore various model configurations, we will evaluate different combinations of fidelity levels for key vehicle components (e.g., suspension, steering, subframe, tires). By creating alternatives that mix different fidelity levels (e.g., suspension with fidelity level 3, steering with fidelity level 1), we can examine how each combination affects real-time performance, computational cost, and model precision.</p>
+
+
+                <h4>Model Simplification</h4>
+                <p>The key components of focus include suspensions, subframe, tires, and steering.</p>
+                <p>Each <strong>alternative</strong> represents a variation of our car model, where different components have specific fidelity levels that vary across simulations.</p>
+                
+                <p>Example of component simplification: </p>
+                
+                <div style="text-align: center;">
+                    <img src="images/ex_comp_simp.jpg" alt="Example of component simplification" style="max-width: 80%; height: auto;">
+                </div>
+
                 <p>Additionally, we will employ <strong>Design of Experiments (DoE)</strong> to systematically analyze how different factors affect the outcome. DoE will help us plan, conduct, and interpret controlled tests to evaluate the relationships between process factors and model outputs.</p>
         
                 <h4><br>Main Tools and Enablers:</h4>
@@ -345,7 +344,7 @@
 
                 <h4><br>Challenges</h4>
                 <ul>
-                    <li>Minimizing friction between components to enhance efficiency and longevity. </li>
+                    <li>Minimizing friction between components to enhance efficiency. </li>
                     <li>Optimizing space management within the compact watch mechanism. </li>
                     <li>Ensuring the structural integrity of components (e.g., preventing plastic deformations). </li>
                     <li>Maintaining tight tolerances for precise assembly and functionality. </li>
